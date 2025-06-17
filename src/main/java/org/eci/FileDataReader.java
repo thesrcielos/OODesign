@@ -6,8 +6,20 @@ import java.nio.file.Path;
 import java.util.List;
 import java.util.stream.Collectors;
 
+/**
+ * Utility class for reading numerical data from a file with two columns.
+ *
+ * The file is expected to contain two numeric columns separated by spaces or commas.
+ */
 public class FileDataReader {
 
+    /**
+     * Reads a file and parses two columns of double values.
+     *
+     * @param filePath the path to the file
+     * @return a {@code ColumnData} record containing two lists: one per column
+     * @throws IOException if the file can't be read
+     */
     public static ColumnData readTwoColumns(String filePath) throws IOException {
         List<String> lines = Files.readAllLines(Path.of(filePath));
 
@@ -33,6 +45,7 @@ public class FileDataReader {
         return new ColumnData(column1, column2);
     }
 
+
     private static Double tryParse(String s) {
         try {
             return Double.parseDouble(s);
@@ -42,5 +55,11 @@ public class FileDataReader {
         }
     }
 
+    /**
+     * Record that holds two columns of parsed numerical data.
+     *
+     * @param column1 the first column of numbers
+     * @param column2 the second column of numbers
+     */
     public record ColumnData(List<Double> column1, List<Double> column2) {}
 }

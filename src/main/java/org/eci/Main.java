@@ -4,6 +4,12 @@ import java.io.IOException;
 import java.util.List;
 import java.util.Scanner;
 
+/**
+ * Main class to run the mean and standard deviation calculator.
+ *
+ * Reads a file path from the console, parses two columns of numerical data,
+ * calculates mean and standard deviation for each column, and prints the results.
+ */
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);

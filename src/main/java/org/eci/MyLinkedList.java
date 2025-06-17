@@ -2,6 +2,16 @@ package org.eci;
 
 import java.util.*;
 
+/**
+ * Custom implementation of a singly linked list with tail pointer.
+ *
+ * This class partially implements Java's {@code List<E>} interface and supports:
+ * - Adding elements to the end of the list in O(1) time
+ * - Accessing elements by index
+ * - Iteration using {@code Iterator<E>}
+ *
+ * @param <E> the type of elements stored in the list
+ */
 public class MyLinkedList<E> implements List<E> {
     private Node<E> head;
     private Node<E> tail;

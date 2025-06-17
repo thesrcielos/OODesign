@@ -79,7 +79,7 @@ Generate and view the documentation with:
 ```
 mvn javadoc:javadoc
 ```
-Open it at: target/site/apidocs/index.html
+Open it at: target/reports/apidocs/index.html
 
 ## Test Report
 
